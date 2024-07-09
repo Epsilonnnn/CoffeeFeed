@@ -1,22 +1,8 @@
-# create-svelte
-
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+# Coffee feed
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've installed dependencies with `npm install`, start a development server:
 
 ```bash
 npm run dev
@@ -25,14 +11,22 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+If you want to use `Redis` to store cached data then use env variable `USE_REDIS=true`. By default, in dev mode local storage (e.g. js object) is used
 
-To create a production version of your app:
+## Production
+
+### Building
+
+To create a production version of the app:
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+### Launch
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+npm run start:prod
+```
+
+`Redis` is used by default. After executing the command the app will be running on `3000` port
